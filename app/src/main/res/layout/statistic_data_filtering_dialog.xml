@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/registerPageBackgroundColor"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/statistic_radio_group_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radio_button_custom_date_range"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radio_button_last_week"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                 />
+
+            <RadioButton
+                android:id="@+id/radio_button_last_month"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_last_year"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/date_selected_statistic_data_filtering_dialog_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:hint="@string/statistic_data_filtering_dialog_filtering_date_range"
+                    android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+                    app:boxBackgroundColor="@color/registerPageBackgroundColor"
+                    app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/date_selected_statistic_data_filtering_dialog_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:maxLines="1"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/pick_date_statistic_data_filtering_dialog_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="0.1"
+                    android:contentDescription="@string/fragment_reminders_icon_description"
+                    android:src="@drawable/ic_baseline_calendar_today_24" />
+            </LinearLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/statistic_last_week_value_textfield_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:hint="@string/last_week_filtering_date"
+                android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+                app:boxBackgroundColor="@color/registerPageBackgroundColor"
+                app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/statistic_last_week_value_edittext_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:maxLines="1"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/statistic_last_month_value_textfield_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:hint="@string/last_month_filtering_date"
+                android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+                app:boxBackgroundColor="@color/registerPageBackgroundColor"
+                app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/statistic_last_month_value_edittext_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:maxLines="1"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/statistic_last_year_value_textfield_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/last_year_filtering_date"
+                android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+                app:boxBackgroundColor="@color/registerPageBackgroundColor"
+                app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/statistic_last_year_value_edittext_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

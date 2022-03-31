@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/registerPageBackgroundColor"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/car_modify_brand_textfield_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/car_modify_brand_edittext_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/modify_car_layout_brand"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/car_modify_model_textfield_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/car_modify_model_edittext_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/modify_car_layout_model"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/car_modify_year_of_prod_textfield_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/car_modify_year_of_prod_edittext_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/modify_car_layout_year_of_production"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/car_modify_fuel_type_textfield_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/car_modify_fuel_type_edittext_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/modify_car_layout_fuel_type"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/car_modify_vin_textfield_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/car_modify_vin_edittext_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/modify_car_layout_VIN"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/car_modify_policy_number_textfield_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/car_modify_policy_number_edittext_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/modify_car_layout_policy_number"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/car_modify_notes_textfield_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:counterTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/car_modify_notes_edittext_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:hint="@string/modify_car_layout_notes"
+                android:inputType="text|textMultiLine"
+                android:maxLength="800"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

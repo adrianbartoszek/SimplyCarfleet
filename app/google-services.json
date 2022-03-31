@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "893497902801",
+    "project_id": "simply-carfleet",
+    "storage_bucket": "simply-carfleet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893497902801:android:74941e745f2acd019267f0",
+        "android_client_info": {
+          "package_name": "com.simplycarfleet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893497902801-hvhm1dffecbs7nqv906fqbmpm273ahpt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5AkO1HxALC2veAWRmPTLvzmvrFTd-pJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893497902801-hvhm1dffecbs7nqv906fqbmpm273ahpt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

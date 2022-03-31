@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginPageBackgroundColor"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_fragment_add_refuel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/loginAndRegisterPageSecondaryColor"
+        app:title="@string/fragment_add_note_title"
+        app:titleTextColor="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/note_description_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_note_note_description"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/note_description_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:inputType="text|textMultiLine"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/note_car_mileage_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_note_car_mileage"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/note_car_mileage_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/note_date_selected_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint="@string/fragment_add_note_pick_date"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor"
+            app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/note_date_selected_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/image_view_note_pick_date"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/fragment_add_note_icon_description"
+            android:src="@drawable/ic_baseline_calendar_today_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/add_note_receipt_image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/fragment_add_car_photo_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_receipt_24"/>
+
+        <ImageView
+            android:id="@+id/add_note_receipt_image_view2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/fragment_add_car_photo_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_receipt_24" />
+
+        <ImageView
+            android:id="@+id/add_note_receipt_image_view3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/fragment_add_car_photo_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_receipt_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_cancel_add_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/fragment_add_note_button_cancel" />
+
+        <Button
+            android:id="@+id/button_confirm_add_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/fragment_add_note_button_confirm" />
+    </LinearLayout>
+
+</LinearLayout>

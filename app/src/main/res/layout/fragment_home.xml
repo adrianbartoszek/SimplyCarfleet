@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registerPageBackgroundColor"
+    tools:context=".nav_menu.HomeFragment">
+
+    <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabsHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIconTint="@color/white"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/white"
+        app:tabInlineLabel="true"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusedByDefault="true"
+            android:text="@string/fragment_home_tabs_entries" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_home_tabs_statistics" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:id="@+id/spinner_home_background"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fragment_home_background"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabsHome">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/loginAndRegisterPageSecondaryColor"
+            android:popupBackground="@color/registerPageBackgroundColor"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_home_background">
+
+        <TextView
+            android:id="@+id/data_filtering_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_home_filter_background"
+            android:fontFamily="@font/roboto"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:drawableLeftCompat="@drawable/ic_baseline_filter_list_24"
+            app:drawableTint="@color/black" />
+
+        <TextView
+            android:id="@+id/button_cancel_data_filtering"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/fragment_home_filter_background"
+            app:drawableLeftCompat="@drawable/ic_baseline_close_24"
+            app:drawableTint="@color/black"
+            app:layout_constraintHorizontal_chainStyle="packed" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="330dp"
+        android:background="@drawable/fragment_home_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_container">
+
+        <TextView
+            android:id="@+id/last_statistics_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/fragment_home_header"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#ffffff" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/fragment_home_no_entries_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_home_card_title"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/fragment_home_card_description"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
+            android:clipToPadding="false"
+            app:layout_constraintHeight_default="wrap"
+            tools:listitem="@layout/list_row_home" />
+
+
+    </LinearLayout>
+
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:sdMainFabClosedSrc="@drawable/ic_baseline_add_24"
+        app:sdOverlayLayout="@id/overlay" />
+
+    <TextView
+        android:id="@+id/current_statistic_type_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/loginAndRegisterPageSecondaryColor"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_home_background"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/current_date_range_type_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:textColor="@color/loginAndRegisterPageSecondaryColor"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_home_background"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="22dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_home_no_cars_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_home_no_cars_card_title"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/fragment_home_no_cars_card_description"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

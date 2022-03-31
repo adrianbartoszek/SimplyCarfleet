@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/modify_statistic"
+        android:title="@string/menu_statistics_modify_statistic_title" />
+    <item
+        android:id="@+id/del_statistic"
+        android:title="@string/menu_statistics_del_statistic_title" />
+</menu>

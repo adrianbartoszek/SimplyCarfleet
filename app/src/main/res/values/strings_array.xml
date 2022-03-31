@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- waluty -->
+    <string-array name="currency_array">
+        <item>@string/settings_fragment_currency_zl_description</item>
+        <item>@string/settings_fragment_currency_eur_description</item>
+        <item>@string/settings_fragment_currency_gbp_description</item>
+        <item>@string/settings_fragment_currency_jpy_description</item>
+        <item>@string/settings_fragment_currency_usd_description</item>
+    </string-array>
+
+    <string-array name="currency_array_shortcut">
+        <item>@string/settings_fragment_currency_zl</item>
+        <item>@string/settings_fragment_currency_eur</item>
+        <item>@string/settings_fragment_currency_gbp</item>
+        <item>@string/settings_fragment_currency_jpy</item>
+        <item>@string/settings_fragment_currency_usd</item>
+    </string-array>
+
+
+    <!-- jednostki objętości -->
+    <string-array name="unit_of_volume_array">
+        <item>@string/settings_fragment_unit_of_volume_l_description</item>
+        <item>@string/settings_fragment_unit_of_volume_gal_description</item>
+    </string-array>
+
+    <string-array name="unit_of_volume_array_shortcut">
+        <item>@string/settings_fragment_unit_of_volume_l</item>
+        <item>@string/settings_fragment_unit_of_volume_gal</item>
+    </string-array>
+
+
+    <!-- jednostki dystansu -->
+    <string-array name="unit_of_distance_array">
+        <item>@string/settings_fragment_unit_of_distance_km_description</item>
+        <item>@string/settings_fragment_unit_of_distance_mi_description</item>
+    </string-array>
+
+    <string-array name="unit_of_distance_array_shortcut">
+        <item>@string/settings_fragment_unit_of_distance_km</item>
+        <item>@string/settings_fragment_unit_of_distance_mi</item>
+    </string-array>
+
+</resources>

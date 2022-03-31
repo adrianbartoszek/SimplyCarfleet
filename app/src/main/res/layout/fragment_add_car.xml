@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentAddCarId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginPageBackgroundColor"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_fragment_add_car"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/loginAndRegisterPageSecondaryColor"
+        app:title="@string/fragment_add_car_title"
+        app:titleTextColor="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/car_brand_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_car_brand"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/car_brand_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/car_model_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_car_model"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/car_model_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/car_year_of_prod_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_car_year_of_prod"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/car_year_of_prod_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/car_fuel_type_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_car_fuel_type"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/car_fuel_type_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/car_vin_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_car_vin"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/car_vin_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/car_policy_number_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_car_policy_number"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/car_policy_number_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/car_notes_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_add_car_notes"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/car_notes_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/car_photo_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/fragment_add_car_photo_description"
+        android:scaleType="fitCenter"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_cancel_add_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/fragment_add_car_button_cancel" />
+
+        <Button
+            android:id="@+id/button_confirm_add_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/fragment_add_car_button_confirm" />
+    </LinearLayout>
+
+</LinearLayout>

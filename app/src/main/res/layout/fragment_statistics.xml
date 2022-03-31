@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registerPageBackgroundColor"
+    android:orientation="vertical"
+    tools:context=".nav_menu.StatisticsFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabsStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIconTint="@color/white"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/white"
+        app:tabInlineLabel="true"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusedByDefault="false"
+            android:text="@string/fragment_statistics_tabs_entries" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusedByDefault="true"
+            android:text="@string/fragment_statistics_tabs_statistics" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:id="@+id/spinner_statistics_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fragment_home_background"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/loginAndRegisterPageSecondaryColor"
+            android:popupBackground="@color/registerPageBackgroundColor"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/statistics_filter_value_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:text="@string/fragment_statistics_filter_value"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/statistics_filter_button_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:text="@string/fragment_statistics_filter_button"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:drawableRightCompat="@drawable/ic_baseline_filter_list_24"
+                app:drawableTint="@color/white"
+                app:layout_constraintHorizontal_chainStyle="packed" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/fragment_home_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/stats_general_header_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/fragment_statistics_general_header"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:drawableStartCompat="@drawable/ic_baseline_insert_chart_24"
+                    app:drawableTint="@color/white" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/fragment_statistics_row_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_general_car_mileage_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_general_car_mileage"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_general_car_mileage_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_general_car_mileage_in_application_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_general_car_mileage_in_application_textview"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_general_car_mileage_in_application_value_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/stats_general_total_cost_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_general_total_cost_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_general_total_cost"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_general_total_cost_value_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.8"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="@color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_general_refueling_amount_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_general_refueling_amount"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_general_refueling_amount_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_general_service_amount_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_general_service_amount"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_general_service_amount_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_general_expenditure_amount_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_general_expenditure_amount"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_general_expenditure_amount_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_general_note_amount_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_general_note_amount"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_general_note_amount_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/fragment_home_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/last_statistics_text_view8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/fragment_statistics_refueling_header"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:drawableLeftCompat="@drawable/ic_baseline_refueling_24"
+                    app:drawableTint="@color/refuelIcon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/fragment_statistics_row_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/fuel_total_amount_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_refueling_fuel_amount_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_refueling_fuel_amount"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_refueling_fuel_amount_value_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.8"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="@color/white" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/fuel_total_cost_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_refueling_total_cost_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_refueling_total_cost"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_refueling_total_cost_value_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.8"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableRightCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="@color/white" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/average_fuel_price_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_refueling_average_price_per_unit_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_refueling_average_price_per_unit"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_refueling_average_price_per_unit_value_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.8"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableRightCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="@color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_refueling_fuel_cost_per_kilometre_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_refueling_fuel_cost_per_kilometre"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_refueling_fuel_cost_per_kilometre_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/average_distance_between_refueling_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_refueling_average_distance_between_refueling_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_stats_refueling_average_distance_between_refueling_textview"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_refueling_average_distance_between_refueling_value_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.8"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center_vertical"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableRightCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="@color/white"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/fragment_home_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/fragment_statistics_service_header"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:drawableLeftCompat="@drawable/ic_baseline_service_24"
+                    app:drawableTint="@color/serviceIcon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/fragment_statistics_row_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_service_total_cost_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_service_total_cost"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_service_total_cost_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/average_service_cost_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_service_average_cost_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_average_cost"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_service_average_cost_value_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.8"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableRightCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="@color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_service_daily_cost_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_service_daily_cost"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_service_daily_cost_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/fragment_home_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/fragment_statistics_expenditure_header"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:drawableLeftCompat="@drawable/ic_baseline_monetization_on_24"
+                    app:drawableTint="@color/expenditureIcon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/fragment_statistics_row_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_expenditure_total_cost_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_expenditure_total_cost"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_expenditure_total_cost_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/average_expenditure_cost_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_expenditure_average_cost_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_expenditure_average_cost"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_expenditure_average_cost_value_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.8"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableRightCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="@color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#30ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stats_expenditure_daily_cost_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/fragment_statistics_expenditure_daily_cost"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/stats_expenditure_daily_cost_value_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_insert_chart_24"
+                        app:drawableTint="#00000000" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

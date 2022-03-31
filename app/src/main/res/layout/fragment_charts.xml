@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/registerPageBackgroundColor"
+    tools:context=".nav_menu.ChartsFragment">
+
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+        android:id="@+id/aa_chart_view"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+    </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+    <Button
+        android:id="@+id/button_cancel_charts_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/fragment_add_note_info_button_cancel"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</LinearLayout>

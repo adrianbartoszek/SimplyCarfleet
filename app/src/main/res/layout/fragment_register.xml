@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registerPageBackgroundColor"
+    android:padding="20dp"
+    tools:context=".authentication.RegisterFragment">
+    <ImageView
+        android:id="@+id/fragment_register_app_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_application_logo"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/last_statistics_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/billiondreams"
+        android:text="@string/fragment_login_logo_app_name"
+        android:textAlignment="center"
+        android:textColor="@color/loginAndRegisterPageSecondaryColor"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_app_logo"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_login_hint_username"
+        app:boxStrokeColor="@color/loginAndRegisterPageSecondaryColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintBottom_toTopOf="@+id/button_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/last_statistics_text_view">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_register_input"
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_login_hint_password"
+        app:boxStrokeColor="@color/loginAndRegisterPageSecondaryColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_text_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_register_input"
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_repeat_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_register_hint_repeat_password"
+        app:boxStrokeColor="@color/loginAndRegisterPageSecondaryColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_text_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/repeat_password_register_input"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_register_button_register"
+        android:backgroundTint="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_repeat_text_input" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_already_have_an_account"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_register_button_already_have_an_account"
+        android:textColor="@color/loginAndRegisterPageSecondaryColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

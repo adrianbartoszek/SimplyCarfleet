@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/modify_car"
+        android:title="@string/menu_cars_modify_car_title" />
+    <item
+        android:id="@+id/change_photo"
+        android:title="@string/menu_cars_change_photo_title" />
+    <item
+        android:id="@+id/del_car"
+        android:title="@string/menu_cars_del_car_title" />
+</menu>

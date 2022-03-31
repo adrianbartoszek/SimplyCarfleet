@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginPageBackgroundColor"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/modify_service_type_textfield_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/modify_service_layout_service_type"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/modify_service_type_edittext_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/modify_service_total_cost_textfield_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/modify_service_layout_total_cost"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/modify_service_total_cost_edittext_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/modify_service_car_mileage_textfield_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/modify_service_layout_car_mileage"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/modify_service_car_mileage_edittext_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/modify_car_workshop_textfield_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/modify_service_layout_workshop"
+        android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+        app:boxBackgroundColor="@color/registerPageBackgroundColor"
+        app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/modify_service_car_workshop_edittext_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/modify_service_date_selected_textview_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint="@string/modify_service_layout_pick_date"
+            android:textColorHint="@color/loginAndRegisterPageSecondaryColor"
+            app:boxBackgroundColor="@color/registerPageBackgroundColor"
+            app:hintTextColor="@color/loginAndRegisterPageSecondaryColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/modify_service_date_selected_edittext_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/modify_service_button_pick_date"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/loginPageBackgroundColor"
+            app:icon="@drawable/ic_baseline_calendar_today_24"
+            app:iconGravity="start"
+            app:iconSize="32dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

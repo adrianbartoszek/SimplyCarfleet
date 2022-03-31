@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registerPageBackgroundColor"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".nav_menu.SettingsFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_settings_info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Media -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:backgroundTint="@color/black"
+                android:contentDescription="@string/fragment_settings_card_image_view_description"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Title, secondary and supporting text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_settings_card_title"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/fragment_settings_card_description"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/change_currency_text_view"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/fragment_settings_change_currency"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_settings_currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/loginAndRegisterPageSecondaryColor"
+        android:popupBackground="@color/registerPageBackgroundColor"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/change_unit_of_volume_text_view"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/fragment_settings_change_unit_of_volume"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_settings_unit_of_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/loginAndRegisterPageSecondaryColor"
+        android:popupBackground="@color/registerPageBackgroundColor"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/change_unit_of_distance_text_view"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/fragment_settings_change_unit_of_distance"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_settings_unit_of_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/loginAndRegisterPageSecondaryColor"
+        android:popupBackground="@color/registerPageBackgroundColor"
+        android:textAlignment="center" />
+
+</LinearLayout>
